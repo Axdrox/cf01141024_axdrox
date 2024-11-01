@@ -23,17 +23,6 @@ management:
     web:
       exposure:
         include: "*"
-  metrics:
-    distribution:
-      percentiles-histogram:
-        http:
-          server:
-            request: true
-        resilience4j:
-          circuitbreaker:
-            calls: true
-    tags:
-      application: servicio-de-clientes
 
 resilience4j:
   circuitbreaker:
@@ -56,7 +45,7 @@ resilience4j:
 
 ---
 # Para utilizar este perfil
-# java -D"spring.profiles.active=nodo1" -jar target/cbv-clientes-0.1.0-SNAPSHOT.jar
+# java -D"spring.profiles.active=nodo1" -jar target/cb-clientes-0.1.0-SNAPSHOT.jar
 spring:
   config:
     activate:
@@ -76,7 +65,7 @@ server:
 
 ---
 # Para utilizar este perfil
-# java -D"spring.profiles.active=nodo2" -jar target/cbv-clientes-0.1.0-SNAPSHOT.jar
+# java -D"spring.profiles.active=nodo2" -jar target/cb-clientes-0.1.0-SNAPSHOT.jar
 spring:
   config:
     activate:
@@ -96,7 +85,7 @@ server:
 
 ---
 # Para utilizar este perfil
-# java -D"spring.profiles.active=nodo3" -jar target/cbv-clientes-0.1.0-SNAPSHOT.jar
+# java -D"spring.profiles.active=nodo3" -jar target/cb-clientes-0.1.0-SNAPSHOT.jar
 spring:
   config:
     activate:
